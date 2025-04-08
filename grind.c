@@ -32,13 +32,15 @@ grind_state_t grind(struct Parser* parser) {
             struct grind_elem* prev = NULL;
             bool freed = false;
             while (itr != NULL) {
+                prev = itr;
                 if (itr->index == parser->index) {
-                    prev->next = itr->next;
-                    free_grind_elem(&itr);
-                    freed = true;
+                    if(freed == false){
+                        free_grind_elem(&itr);
+                        freed = true;
+                    }
                     break;
                 }
-                prev = itr;
+                prev->next = itr->next;
                 itr = itr->next;
             }
             if (!freed) {

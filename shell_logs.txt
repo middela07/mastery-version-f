@@ -1,0 +1,29 @@
+cd
+  495  ls
+  496  touch ~/.gdbinit
+  497  echo set history save on > ~/.gdbinit
+  498  ls
+  499  cat ~/.gdbinit
+  500  git clone git@github.com:middela07/mastery-version-f.git
+  501  make bin/a.out
+  502  make check
+  503  make clean
+  504  make debug
+  505  gdb bin/a.out
+  506  make clean
+  507  make check
+  508  make clean
+  509  gdb bin/a.out
+  510  gdb bin/a
+  511  gdb bin/a.out
+  512  make
+  513  gdb bin/a.out
+  514  make ref.out
+  515  make bin/ref.out
+  516  make bin/ref
+  517  make clean
+  518  make
+  519  ./ref.out
+  520  ./ref.out -t testcases/short1.rep
+  521  show commands
+  522  history
